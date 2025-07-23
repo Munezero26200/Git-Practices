@@ -459,3 +459,124 @@ orks(projects)/Works/Advanced-Git-Practices (main)
 $ git push origin main
 Everything up-to-date
 ```
+### Challenge 6
+Was about to remove unwanted commit from commit history immediately. then after removing here's the remaining commit list.
+```
+in'.
+
+nothing to commit, working tree clean
+
+Admin@MunezeroPC MINGW64 ~/Documents/Thegym-works(projects)/Works/Advanced-Git-Practices (main)
+orks(projects)/Works/Advanced-Git-Practices (main)
+$ git push origin main
+Everything up-to-date
+
+Admin@MunezeroPC MINGW64 ~/Documents/Thegym-works(projects)/Works/Advanced-Git-Practices (main)
+$ git add ReadMe.md
+
+Admin@MunezeroPC MINGW64 ~/Documents/Thegym-works(projects)/Works/Advanced-Git-Practices (main)
+$ git commit -m "The updated ReadMe file with challenge file."
+[main cb549ef] The updated ReadMe file with challenge file.
+ 1 file changed, 15 insertions(+)
+
+Admin@MunezeroPC MINGW64 ~/Documents/Thegym-works(projects)/Works/Advanced-Git-Practices (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+ed with 2 local objects.
+To https://github.com/Munezero26200/Git-Practices.git
+   3d8a946..cb549ef  main -> main
+
+Admin@MunezeroPC MINGW64 ~/Documents/Thegym-works(projects)/Works/Advanced-Git-Practices (main)
+$ git log --oneline
+cb549ef (HEAD -> main, origin/main, origin/HEAD) The updated ReadMe file with challenge file.
+3d8a946 Merge branch 'main' of https://github.com/Munezero26200/Git-Practices
+0eebd93 updated ReadMe.md
+51f1d78 Create Third file
+e561cbd Create fourth file
+c3056f1 chore: Create initial and second  file
+c8ba4cf Here is codes for challenge 1&2 in readme file
+main)
+$
+
+Admin@MunezeroPC MINGW64 ~/Documents/Thegym-works(projects)/Works/Advanced-Git-Practices (main)
+$ git rebase -i HEAD~3
+hint: Waiting for your editor to close the file...
+
+
+interactive rebase in progress; onto 51f1d78
+Last commands done (2 commands done):
+   pick 0eebd93 updated ReadMe.md
+   pick 930faf0 chore: Create initial file
+Next commands to do (4 remaining commands):
+   pick 81d9eb0 chore: Create second file
+   pick fb08b14 chore: Create third and fourth files
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing branch 'main' on '51f1d78'.
+  (all conflicts fixed: run "git rebase --continue")
+
+nothing to commit, working tree clean
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git rebase --skip'    
+Could not apply 930faf0... chore: Create initial file
+
+Admin@MunezeroPC MINGW64 ~/Documents/Thegym-works(projects)/Works/Advanced-Git-Practices (main|REBASE 2/6)
+$
+ *  History restored 
+
+
+Admin@MunezeroPC MINGW64 ~/Documents/Thegym-works(projects)/Works/Advanced-Git-Practices (main|REBASE 2/6)
+$ git add unwanted.txt
+
+Admin@MunezeroPC MINGW64 ~/Documents/Thegym-works(projects)/Works/Advanced-Git-Practices (main|REBASE 2/6)
+$ git commit -m"Unwanted commit"
+[detached HEAD fb57760] Unwanted commit
+ Date: Mon Jul 21 18:02:49 2025 +0200        
+ 1 file changed, 2 insertions(+)
+ create mode 100644 unwanted.txt
+
+Admin@MunezeroPC MINGW64 ~/Documents/Thegym-works(projects)/Works/Advanced-Git-Practices (main|REBASE 2/6)
+$ git status
+interactive rebase in progress; onto 51f1d78
+Last commands done (2 commands done):        
+   pick 0eebd93 updated ReadMe.md
+   pick 930faf0 chore: Create initial file   
+Next commands to do (4 remaining commands):
+   pick 81d9eb0 chore: Create second file    
+   pick fb08b14 chore: Create third and fourth files
+  (use "git rebase --edit-todo" to view and edit)
+You are currently editing a commit while rebasing branch 'main' on '51f1d78'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean        
+
+Admin@MunezeroPC MINGW64 ~/Documents/Thegym-works(projects)/Works/Advanced-Git-Practices (main|REBASE 2/6)
+51f1d78 Create Third file
+e561cbd Create fourth file
+c3056f1 chore: Create initial and second  fil51f1d78 Create Third file
+e561cbd Create fourth file
+c3056f1 chore: Create initial and second  file
+
+Admin@MunezeroPC MINGW64 ~/Documents/Thegym-works(projects)/Works/Advanced-Git-Practices (main|REBASE 2/6)
+$ git rebase --abort
+cb549ef (HEAD -> main, origin/main, origin/HEAD) The updated ReadMe file with challenge file.
+3d8a946 Merge branch 'main' of https://github.com/Munezero26200/Git-Practices
+0eebd93 updated ReadMe.md
+51f1d78 Create Third file
+e561cbd Create fourth file
+:
+cb549ef (HEAD -> main, origin/main, origin/HEAD) The updated ReadMe file with challenge file.
+cb549ef (HEAD -> main, origin/main, origin/HEAD) The updated ReadMe file with challenge file.
+3d8a946 Merge branch 'main' of https://github.com/Munezero26200/Git-Practices
+0eebd93 updated ReadMe.md
+51f1d78 Create Third file
+e561cbd Create fourth file
+c3056f1 chore: Create initial and second  file
+c8ba4cf Here is codes for challenge 1&2 in readme file
+fb08b14 chore: Create third and fourth files```

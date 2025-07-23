@@ -444,3 +444,18 @@ adme file
 1ead9a4 chore: Create third and fourth files
 c3056f1 chore: Create initial and second  file
 ```
+### Challenge 4
+```
+
+Admin@MunezeroPC MINGW64 ~/Documents/Thegym-works(projects)/Works/Advanced-Git-Practices (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Admin@MunezeroPC MINGW64 ~/Documents/Thegym-works(projects)/Works/Advanced-Git-Practices (main)
+orks(projects)/Works/Advanced-Git-Practices (main)
+$ git push origin main
+Everything up-to-date
+```
